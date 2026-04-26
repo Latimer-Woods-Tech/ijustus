@@ -1,0 +1,40 @@
+{
+  "name": "ijustus",
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/index.ts",
+
+  // ── Hyperdrive (Neon Postgres via @adrper79-dot/neon) ──────────────────────
+  "hyperdrive": [
+    {
+      "binding": "DB",
+      "id": "933b84184870481ab097a4506db5a675"
+    }
+  ],
+
+  // ── Non-secret vars (secrets go in wrangler secret put, never here) ────────
+  "vars": {
+    "ENVIRONMENT": "production",
+    "WORKER_NAME": "ijustus"
+  },
+
+  // ── Rate Limiter (auth routes) ────────────────────────────────────────────
+  "rate_limiters": [
+    {
+      "binding": "AUTH_RATE_LIMITER",
+      "namespace_id": "1004",
+      "simple": { "limit": 60, "period": 60 }
+    }
+  ],
+
+  // ── Staging environment ────────────────────────────────────────────────────
+  "env": {
+    "staging": {
+      "name": "ijustus-staging",
+      "vars": {
+        "ENVIRONMENT": "staging",
+        "WORKER_NAME": "ijustus-staging"
+      }
+    }
+  }
+}
