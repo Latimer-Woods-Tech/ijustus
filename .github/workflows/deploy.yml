@@ -31,4 +31,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy --env ${{ github.event.inputs.environment || 'production' }}
+          command: ${{ github.event.inputs.environment == 'staging' && 'deploy --env staging' || 'deploy' }}
