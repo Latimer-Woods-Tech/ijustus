@@ -10,6 +10,7 @@ import {
   boolean,
   doublePrecision,
   jsonb,
+  timestamp,
 } from 'drizzle-orm/pg-core';
 
 /** Law firms / legal-aid orgs that access the platform. */
