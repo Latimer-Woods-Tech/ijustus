@@ -23,7 +23,7 @@
     "@adrper79-dot/monitoring": "^0.2.0",
     "@adrper79-dot/neon": "^0.2.0",
     "@adrper79-dot/telephony": "^0.2.0",
-    "drizzle-orm": "^0.43.0",
+    "drizzle-orm": "^0.45.2",
     "hono": "^4.12.15"
   },
   "devDependencies": {
