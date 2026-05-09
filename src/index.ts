@@ -3,6 +3,7 @@ import { FactoryBaseError, withErrorBoundary, toErrorResponse } from '@latimer-w
 import { sentryMiddleware } from '@latimer-woods-tech/monitoring';
 import { initAnalytics } from '@latimer-woods-tech/analytics';
 import { jwtMiddleware } from '@latimer-woods-tech/auth';
+import { createDb } from '@latimer-woods-tech/neon';
 import { organizationsRouter } from './routes/organizations.js';
 import { simulatorsRouter } from './routes/simulators.js';
 import { sessionsRouter } from './routes/sessions.js';
@@ -28,7 +29,7 @@ app.use('*', (c, next) =>
 app.use('*', async (c, next) => {
   const analytics = initAnalytics({
     postHogKey: c.env.POSTHOG_KEY,
-    db: c.env.DB,
+    db: createDb(c.env.DB),
     appId: 'ijustus',
   });
   c.set('analytics', analytics);
