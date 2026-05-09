@@ -15,7 +15,7 @@ describe('ijustus', () => {
     const res = await app.request('/health', {}, {
       ENVIRONMENT: 'test',
       WORKER_NAME: 'ijustus',
-      DB: { connectionString: 'postgresql://test:test@localhost:5432/test' } as Hyperdrive,
+      DB: { connectionString: 'postgresql://mock-user:mock-pass@localhost:5432/mock-db' } as Hyperdrive,
       JWT_SECRET: 'test-secret',
       SENTRY_DSN: '',
       POSTHOG_KEY: '',
