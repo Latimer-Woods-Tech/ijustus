@@ -33,7 +33,7 @@ app.use('*', async (c, next) => {
     appId: 'ijustus',
   });
   c.set('analytics', analytics);
-  await analytics.page(c.req.path, { method: c.req.method, userAgent: c.req.header('user-agent') || 'unknown' });
+  try { await analytics.page(c.req.path, { method: c.req.method, userAgent: c.req.header('user-agent') || 'unknown' }); } catch { /* observability must never block requests */ }
   return next();
 });
 
