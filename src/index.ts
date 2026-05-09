@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { FactoryBaseError, withErrorBoundary, toErrorResponse } from '@latimer-woods-tech/errors';
 import { sentryMiddleware } from '@latimer-woods-tech/monitoring';
 import { initAnalytics } from '@latimer-woods-tech/analytics';
-import { createDb } from '@latimer-woods-tech/neon';
+import type { FactoryDb } from '@latimer-woods-tech/neon';
 import { jwtMiddleware } from '@latimer-woods-tech/auth';
 import { organizationsRouter } from './routes/organizations.js';
 import { simulatorsRouter } from './routes/simulators.js';
@@ -29,7 +29,7 @@ app.use('*', (c, next) =>
 app.use('*', async (c, next) => {
   const analytics = initAnalytics({
     postHogKey: c.env.POSTHOG_KEY,
-    db: createDb(c.env.DB),
+    db: c.env.DB as unknown as FactoryDb,
     appId: 'ijustus',
   });
   c.set('analytics', analytics);
