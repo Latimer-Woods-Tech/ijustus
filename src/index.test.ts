@@ -6,7 +6,7 @@ describe('ijustus', () => {
     const res = await app.request('/health', {}, {
       ENVIRONMENT: 'test',
       WORKER_NAME: 'ijustus',
-      DB: {} as Hyperdrive,
+      DB: { connectionString: 'postgres://test:test@localhost:5432/test' } as unknown as Hyperdrive,
       JWT_SECRET: 'test-secret',
       SENTRY_DSN: '',
       POSTHOG_KEY: '',
