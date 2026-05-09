@@ -24,7 +24,7 @@
     "@latimer-woods-tech/neon": "^0.2.0",
     "@latimer-woods-tech/telephony": "^0.2.0",
     "drizzle-orm": "^0.43.0",
-    "hono": "^4.12.15"
+    "hono": "^4.12.18"
   },
   "devDependencies": {
     "@latimer-woods-tech/testing": "^0.2.0",
