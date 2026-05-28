@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "generated_by": "scripts/docs/catalog.mjs",
+  "generated_at": "source-derived",
+  "generated_at_commit": null,
+  "git_status": "not-recorded",
+  "source_hashes": {
+    "docs/_governance/canonical-docs.yml": "sha256:ac9a1164a29ad6527de788b6d16c7f2c38fede84914c158fe7c7721e92e1e5f4",
+    "docs/_governance/doc-overrides.yml": "sha256:712d6dacdd9411833d06111bb5feac0f718f12aa049cdb9de0122867ef0d46bf"
+  },
+  "counts": {
+    "total_docs": 10,
+    "canonical": 1,
+    "active": 7,
+    "stale": 0,
+    "archive": 0,
+    "generated": 2,
+    "scratch": 0,
+    "missing_canonical": 0
+  },
+  "errors": [],
+  "docs": [
+    {
+      "path": "CLAUDE.md",
+      "title": "iJustus — Standing Orders",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "reference",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:bb7747009f09e44feb853d5f1850c6fc6134e225e327198b175a851688691867",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "*.md"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/_generated/docs-trust-map.md",
+      "title": "Factory Documentation Trust Map",
+      "status": "generated",
+      "owner": "ijustus",
+      "doc_type": "diagram",
+      "fidelity": "generated",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:733f9e415a52e37d95458cbf8e1fce843ed121a0b1d51275c64bbb1ee70329c3",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/_generated/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/_generated/workflow-map.md",
+      "title": "Factory Workflow Map",
+      "status": "generated",
+      "owner": "ijustus",
+      "doc_type": "diagram",
+      "fidelity": "generated",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:37352cfedf3a23e092cee537337f22da6fd90f8f36a413ac7750a92c1f68b9bf",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/_generated/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/README.md",
+      "title": "ijustus Documentation",
+      "status": "canonical",
+      "owner": "ijustus",
+      "doc_type": "index",
+      "fidelity": "owner-reviewed",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": "Repo entry point and current orientation.",
+      "truth_sources": [
+        "manual-review"
+      ],
+      "verified_by": [],
+      "content_hash": "sha256:c64747e4d7fb30d231a08ee0b75b8aca04a0915ffdbf3a2f19abd20c5272bd90",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": true,
+        "override": "docs/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/runbooks/database.md",
+      "title": "ijustus — Database",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "runbook",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:23f26f1f41624528f9fa2e3945ba26c59924b71fe324dbf15be8f59a5ba9e931",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/runbooks/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/runbooks/deployment.md",
+      "title": "ijustus — Deployment",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "runbook",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:8f8a083d31ec410a7e4ac26cce90e3b7778b72b339d496258f040b39053800aa",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/runbooks/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/runbooks/getting-started.md",
+      "title": "ijustus — Getting Started",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "runbook",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:2bfeea5b32bf6124645fa61054b4dd257b957f6194c4d9d2a8231ff02a4f215a",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/runbooks/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/runbooks/secret-rotation.md",
+      "title": "ijustus — Secret Rotation",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "runbook",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:c22611f042c43c414afc2d0d08fcfd4a7417297dac630a0131b7e22581ff4983",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/runbooks/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "docs/runbooks/slo.md",
+      "title": "ijustus — SLO",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "runbook",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:080c4215273d47e01e9f5e906d153edcb55523b29c1f86b4fc7887d76b65c438",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "docs/runbooks/**"
+      },
+      "errors": []
+    },
+    {
+      "path": "SECURITY.md",
+      "title": "Security Policy",
+      "status": "active",
+      "owner": "ijustus",
+      "doc_type": "reference",
+      "fidelity": "unverified",
+      "quality": "usable",
+      "last_updated": null,
+      "last_verified": null,
+      "scope": null,
+      "truth_sources": [],
+      "verified_by": [],
+      "content_hash": "sha256:1bf15fcce877066d707327e4878ac998717d1843c52e0150436e866c9eb90412",
+      "source": {
+        "frontmatter": false,
+        "canonical_allowlist": false,
+        "override": "*.md"
+      },
+      "errors": []
+    }
+  ]
+}
