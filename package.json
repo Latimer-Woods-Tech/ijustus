@@ -29,11 +29,11 @@
   "devDependencies": {
     "@latimer-woods-tech/testing": "^0.2.0",
     "@cloudflare/workers-types": "^4.20260426.1",
-    "@cloudflare/vitest-pool-workers": "^0.8.0",
+    "@cloudflare/vitest-pool-workers": "^0.16.20",
     "drizzle-kit": "^0.31.0",
     "typescript": "^5.4.0",
     "wrangler": "^4.0.0",
-    "vitest": "^2.0.0",
-    "@vitest/coverage-v8": "^2.0.0"
+    "vitest": "^4.1.9",
+    "@vitest/coverage-v8": "^4.1.9"
   }
 }
