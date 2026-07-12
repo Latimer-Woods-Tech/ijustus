@@ -3,3 +3,21 @@ node_modules/
 coverage/
 .dev.vars
 *.local
+# --- secrets / build hardening (Factory docs/policies/secrets-management.md) ---
+.env
+.env.*
+!.env.example
+!.env.template
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+*.p8
+.open-next/
+.next/
+.wrangler/
+dist/
+build/
+out/
+coverage/
