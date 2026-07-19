@@ -1,0 +1,27 @@
+# DB boundary guard — capricast#911 (estate review 2026-07-18).
+#
+# Weekly regression check that the `ijustus-db` Hyperdrive origin still points
+# at the owned OCI `neighbor_aid` database, and NOT at kairoscouncil (or any
+# other product's DB). The same check runs pre-deploy in deploy.yml; this
+# schedule catches out-of-band Hyperdrive edits between deploys.
+name: DB Boundary Guard
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays 06:17 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/check-db-boundary.sh
+      - .github/workflows/db-boundary-guard.yml
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check DB boundary (ijustus-db -> neighbor_aid)
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: bash scripts/check-db-boundary.sh

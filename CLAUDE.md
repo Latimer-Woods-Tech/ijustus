@@ -15,7 +15,7 @@ education through structured session management and interactive simulators.
 |-------|-----------|
 | Runtime | Cloudflare Workers only |
 | Router | Hono |
-| Database | Neon Postgres via Hyperdrive binding (`env.DB`) |
+| Database | OCI Postgres `neighbor_aid` via Hyperdrive binding (`env.DB`) — boundary contract in `wrangler.jsonc`; never point at another product's DB (capricast#911) |
 | Auth | JWT self-managed via `@latimer-woods-tech/auth` |
 | Errors | Sentry via `@latimer-woods-tech/monitoring` |
 | Analytics | PostHog + `factory_events` via `@latimer-woods-tech/analytics` |

@@ -27,6 +27,14 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_READ_TOKEN }}
       - run: npm run typecheck
+      # DB boundary guard (capricast#911): refuse to deploy if the ijustus-db
+      # Hyperdrive origin has drifted off the owned neighbor_aid database
+      # (it was misdirected at kairoscouncil PROD until 2026-07-18).
+      - name: Check DB boundary (ijustus-db -> neighbor_aid)
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: bash scripts/check-db-boundary.sh
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

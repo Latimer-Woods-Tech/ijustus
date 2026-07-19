@@ -4,7 +4,15 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/index.ts",
 
-  // ── Hyperdrive (Neon Postgres via @latimer-woods-tech/neon) ──────────────────────
+  // ── Hyperdrive → OCI Postgres (via @latimer-woods-tech/neon driver) ───────
+  // BOUNDARY CONTRACT (capricast#911, estate review 2026-07-18):
+  // id 933b8418… = the `ijustus-db` Hyperdrive config. Its origin MUST be the
+  // OCI Postgres `neighbor_aid` database (user `neighbor_aid`) — ijustus is
+  // neighbor-aid's voice frontend and owns tables organizations / simulators /
+  // call_sessions there. It must NEVER point at another product's database
+  // (it was misdirected at kairoscouncil PROD until 2026-07-18). Enforced by
+  // scripts/check-db-boundary.sh, run pre-deploy in deploy.yml and weekly in
+  // .github/workflows/db-boundary-guard.yml.
   "hyperdrive": [
     {
       "binding": "DB",
