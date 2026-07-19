@@ -23,5 +23,7 @@ jobs:
       - name: Check DB boundary (ijustus-db -> neighbor_aid)
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_HYPERDRIVE_READ_TOKEN: ${{ secrets.CF_HYPERDRIVE_READ_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          STRICT: '1' # unverifiable boundary (missing Hyperdrive:Read) fails loud here
         run: bash scripts/check-db-boundary.sh
