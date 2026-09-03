@@ -1,6 +1,7 @@
 # iJustus — Standing Orders
 
 > Canonical reference for all agents, engineers, and AI tools working in this repository.
+> 🔩 **Shared stack (packages, AI chain, banned tools):** [factory `docs/STACK.md`](https://github.com/Latimer-Woods-Tech/factory/blob/main/docs/STACK.md) — versioned manifest, auto-updated on every publish.
 
 ## Mission
 
