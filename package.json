@@ -23,12 +23,12 @@
     "@latimer-woods-tech/monitoring": "^0.2.0",
     "@latimer-woods-tech/neon": "^0.2.0",
     "@latimer-woods-tech/telephony": "^0.2.0",
-    "drizzle-orm": "^0.43.0",
+    "drizzle-orm": "^0.45.2",
     "hono": "^4.12.15"
   },
   "devDependencies": {
     "@latimer-woods-tech/testing": "^0.2.0",
-    "@cloudflare/workers-types": "^4.20260426.1",
+    "@cloudflare/workers-types": "^5.20260722.1",
     "@cloudflare/vitest-pool-workers": "^0.8.0",
     "drizzle-kit": "^0.31.0",
     "typescript": "^5.4.0",
