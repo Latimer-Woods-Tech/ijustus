@@ -21,11 +21,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@adrper79-dot'
-      - run: npm ci
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@latimer-woods-tech'
+      - run: rm -f package-lock.json && npm install --no-fund --no-audit
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_READ_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run typecheck
       - uses: cloudflare/wrangler-action@v3
         with:
