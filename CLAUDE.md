@@ -1,5 +1,10 @@
 # iJustus — Standing Orders
 
+> **Retired 2026-10-09.** Production serves the binding-free `src/retired.ts`
+> Worker with HTTP 410. The former `ijustus-db` Hyperdrive pointed at Neighbor
+> Aid production data. Never redeploy `src/index.ts` or reattach that binding.
+> See Factory issue #4783 and the README before any restoration decision.
+
 > Canonical reference for all agents, engineers, and AI tools working in this repository.
 
 ## Mission
