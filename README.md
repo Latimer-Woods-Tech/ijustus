@@ -1,4 +1,17 @@
-# iJustus
+# iJustus — retired 2026-10-09
+
+The founder retired this service after discovery that its `ijustus-db` Hyperdrive
+configuration connected to the Neighbor Aid production database. The live Worker
+now returns HTTP 410 at `ijustus.com`, `www.ijustus.com`, and its `workers.dev`
+hostname. It has no database or secret bindings. The deploy workflow is disabled
+in GitHub and removed from this source tree.
+
+Do not deploy the old `src/index.ts` app or restore its `DB` binding. Historical
+source remains here for investigation. Factory issue
+[`#4783`](https://github.com/Latimer-Woods-Tech/Factory/issues/4783) records the
+boundary incident and retirement evidence.
+
+## Historical documentation
 
 A Cloudflare Workers application built on the Factory Core infrastructure. Civic and justice
 platform — organization management, session facilitation, and simulation tools for legal and
